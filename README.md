@@ -15,7 +15,7 @@ Developer: **Ray**
 ---
 
 ## 🔬 Technologies:
-`Java 17`, `Spring Data`, `Spring Boot`, `Spring Security`, `JWT`, `PostgreSQL`, `Liquibase`, `Junit`, `Mapstruct`, `Swagger`, etc.
+`Java 17`, `Spring Data`, `Spring Boot`, `Spring Security`, `JWT`, `PostgreSQL`, `Liquibase`, `Junit`, `Mapstruct`, `Swagger`, `Audit`, `Log` etc.
 
 ---
 
