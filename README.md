@@ -24,11 +24,11 @@ Developer: **Ray**
 | # | URL | Type | Description | Active |
 | - | - | - | - | - |
 | 1 | localhost:8080/login | `POST` | Login | ✅ Active |
-| 2 | localhost:8080/role?_limit=10&_page=1 | `GET` | Role  - Search | ⛔ Stop |
-| 3 | localhost:8080/role/1 | `GET` | Role - Get By ID | ⛔ Stop |
-| 4 | localhost:8080/role | `POST` | Role - Save | ⛔ Stop |
-| 5 | localhost:8080/role/1 | `PUT` | Role - Update | ⛔ Stop |
-| 6 | localhost:8080/role/1 | `DELETE` | Role - Delete | ⛔ Stop |
+| 2 | localhost:8080/role | `GET` | Role  - Search | ✅ Active |
+| 3 | localhost:8080/role/1 | `GET` | Role - Get By ID | ✅ Active |
+| 4 | localhost:8080/role | `POST` | Role - Save | ✅ Active |
+| 5 | localhost:8080/role/1 | `PUT` | Role - Update | ✅ Active |
+| 6 | localhost:8080/role/1 | `DELETE` | Role - Delete | ✅ Active |
 | 7 | localhost:8080/permission?_limit=10&_page=1 | `GET` | Permission  - Search | ⛔ Stop |
 | 8 | localhost:8080/permission/1 | `GET` | Permission - Get By ID | ⛔ Stop |
 | 9 | localhost:8080/permission | `POST` | Permission - Save | ⛔ Stop |
