@@ -10,7 +10,6 @@ import com.tday.school_management_system.service.RoleService;
 import com.tday.school_management_system.repository.RoleRepository;
 import com.tday.school_management_system.exception.ResourceNotFoundException;
 
-
 @Service
 public class RoleServiceImpl implements RoleService {
 
@@ -29,6 +28,11 @@ public class RoleServiceImpl implements RoleService {
     @Override
     public Role getById(Long id) {
         return roleRepository.findById(id).orElseThrow(()-> new ResourceNotFoundException("Role"));
+    }
+    
+    @Override
+    public Role getByName(String name) {
+        return roleRepository.findByName(name);
     }
     
     @Override
