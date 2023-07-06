@@ -34,16 +34,16 @@ Developer: **Ray**
 | 9 | localhost:8080/permission | `POST` | Permission - Save | ✅ |
 | 10 | localhost:8080/permission/1 | `PUT` | Permission - Update | ✅ |
 | 11 | localhost:8080/permission/1 | `DELETE` | Permission - Delete | ✅ |
-| 12 | localhost:8080/user?_limit=10&_page=1 | `GET` | User  - Search | ⛔ |
-| 13 | localhost:8080/user/1 | `GET` | User - Get By ID | ⛔ |
-| 14 | localhost:8080/user | `POST` | User - Register | ⛔ |
-| 15 | localhost:8080/user/1 | `PUT` | User - Update | ⛔ |
-| 16 | localhost:8080/user/1 | `DELETE` | User - Delete | ⛔ |
-| 17 | localhost:8080/category?_limit=10&_page=1 | `GET` | Category  - Search | ⛔ |
-| 18 | localhost:8080/category/1 | `GET` | Category - Get By ID | ⛔ |
-| 19 | localhost:8080/category | `POST` | Category - Save | ⛔ |
-| 20 | localhost:8080/category/1 | `PUT` | Category - Update | ⛔ |
-| 21 | localhost:8080/category/1 | `DELETE` | Category - Delete | ⛔ |
+| 12 | localhost:8080/user?_limit=10&_page=1 | `GET` | User  - Search | ✅ |
+| 13 | localhost:8080/user/1 | `GET` | User - Get By ID | ✅ |
+| 14 | localhost:8080/user | `POST` | User - Register | ✅ |
+| 15 | localhost:8080/user/1 | `PUT` | User - Update | ✅ |
+| 16 | localhost:8080/user/1 | `DELETE` | User - Delete | ✅ |
+| 17 | localhost:8080/category?_limit=10&_page=1 | `GET` | Category  - Search | ✅ |
+| 18 | localhost:8080/category/1 | `GET` | Category - Get By ID | ✅ |
+| 19 | localhost:8080/category | `POST` | Category - Save | ✅ |
+| 20 | localhost:8080/category/1 | `PUT` | Category - Update | ✅ |
+| 21 | localhost:8080/category/1 | `DELETE` | Category - Delete | ✅ |
 | 22 | localhost:8080/course?_limit=10&_page=1 | `GET` | Course  - Search | ⛔ |
 | 23 | localhost:8080/course/1 | `GET` | Course - Get By ID | ⛔ |
 | 24 | localhost:8080/course | `POST` | Course - Save | ⛔ |
