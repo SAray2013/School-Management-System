@@ -56,11 +56,11 @@ Developer: **Ray**
 | 31 | localhost:8080/course/list-review-enroll | `GET` | Course - List Review Enroll | ⛔ |
 | 32 | localhost:8080/course/approve-enroll/1 | `POST` | Course - Approve Enroll | ⛔ |
 | 33 | localhost:8080/course/reject-enroll/1 | `POST` | Course - Reject Enroll | ⛔ |
-| 34 | localhost:8080/course-video?_limit=10&_page=1 | `GET` | Course Video  - Search | ⛔ |
-| 35 | localhost:8080/course-video/1 | `GET` | Course Video - Get By ID | ⛔ |
-| 36 | localhost:8080/course-video | `POST` | Course Video - Save | ⛔ |
-| 37 | localhost:8080/course-video/1 | `PUT` | Course Video - Update | ⛔ |
-| 38 | localhost:8080/course-video/1 | `DELETE` | Course Video - Delete | ⛔ |
+| 34 | localhost:8080/course-video?_limit=10&_page=1 | `GET` | Course Video  - Search | ✅ |
+| 35 | localhost:8080/course-video/1 | `GET` | Course Video - Get By ID | ✅ |
+| 36 | localhost:8080/course-video | `POST` | Course Video - Save | ✅ |
+| 37 | localhost:8080/course-video/1 | `PUT` | Course Video - Update | ✅ |
+| 38 | localhost:8080/course-video/1 | `DELETE` | Course Video - Delete | ✅ |
 | 39 | localhost:8080/register-author | `POST` | Register author | ⛔ |
 | 40 | localhost:8080/register-subscriber | `POST` | Register Subscriber | ⛔ |
 | 41 | localhost:8080/verify-email | `POST` | Verify email | ⛔ |
