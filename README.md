@@ -44,11 +44,11 @@ Developer: **Ray**
 | 19 | localhost:8080/category | `POST` | Category - Save | ✅ |
 | 20 | localhost:8080/category/1 | `PUT` | Category - Update | ✅ |
 | 21 | localhost:8080/category/1 | `DELETE` | Category - Delete | ✅ |
-| 22 | localhost:8080/course?_limit=10&_page=1 | `GET` | Course  - Search | ⛔ |
-| 23 | localhost:8080/course/1 | `GET` | Course - Get By ID | ⛔ |
-| 24 | localhost:8080/course | `POST` | Course - Save | ⛔ |
-| 25 | localhost:8080/course/1 | `PUT` | Course - Update | ⛔ |
-| 26 | localhost:8080/course/1 | `DELETE` | Course - Delete | ⛔ |
+| 22 | localhost:8080/course?_limit=10&_page=1 | `GET` | Course  - Search | ✅ |
+| 23 | localhost:8080/course/1 | `GET` | Course - Get By ID | ✅ |
+| 24 | localhost:8080/course | `POST` | Course - Save | ✅ |
+| 25 | localhost:8080/course/1 | `PUT` | Course - Update | ✅ |
+| 26 | localhost:8080/course/1 | `DELETE` | Course - Delete | ✅ |
 | 27 | localhost:8080/course/preview/1 | `POST` | Course - Preview | ⛔ |
 | 28 | localhost:8080/course/record-visit/1 | `POST` | Course - Record Visit | ⛔ |
 | 29 | localhost:8080/course/record-like/1 | `POST` | Course - Record Like | ⛔ |

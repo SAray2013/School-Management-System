@@ -42,6 +42,12 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<!-- *-* Validation Start *-* -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-validation</artifactId>
+		</dependency>
+		<!-- *-* Validation Stop *-* -->
 		<!-- *-* Mapstruct Start *-* -->
 		<dependency>
 			<groupId>org.mapstruct</groupId>
