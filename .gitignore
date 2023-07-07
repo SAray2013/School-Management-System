@@ -18,3 +18,4 @@ buildNumber.properties
 .factorypath
 .settings
 .DS_Store
+.vscode
