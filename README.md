@@ -49,13 +49,13 @@ Developer: **Ray**
 | 24 | localhost:8080/course | `POST` | Course - Save | ✅ |
 | 25 | localhost:8080/course/1 | `PUT` | Course - Update | ✅ |
 | 26 | localhost:8080/course/1 | `DELETE` | Course - Delete | ✅ |
-| 27 | localhost:8080/course/preview/1 | `POST` | Course - Preview | ⛔ |
-| 28 | localhost:8080/course/record-visit/1 | `POST` | Course - Record Visit | ⛔ |
-| 29 | localhost:8080/course/record-like/1 | `POST` | Course - Record Like | ⛔ |
-| 30 | localhost:8080/course/enroll/1 | `POST` | Course - Enroll | ⛔ |
-| 31 | localhost:8080/course/list-review-enroll | `GET` | Course - List Review Enroll | ⛔ |
-| 32 | localhost:8080/course/approve-enroll/1 | `POST` | Course - Approve Enroll | ⛔ |
-| 33 | localhost:8080/course/reject-enroll/1 | `POST` | Course - Reject Enroll | ⛔ |
+| 27 | localhost:8080/course/preview/1 | `POST` | Course - Preview | ✅ |
+| 28 | localhost:8080/course/record-visit | `POST` | Course - Record Visit | ✅ |
+| 29 | localhost:8080/course/record-like | `POST` | Course - Record Like | ✅ |
+| 30 | localhost:8080/course/enroll | `POST` | Course - Enroll | ✅ |
+| 31 | localhost:8080/course/list-review-enroll | `GET` | Course - List Review Enroll | ✅ |
+| 32 | localhost:8080/course/approve-enroll/1 | `PUT` | Course - Approve Enroll | ✅ |
+| 33 | localhost:8080/course/reject-enroll/1 | `PUT` | Course - Reject Enroll | ✅ |
 | 34 | localhost:8080/course-video?_limit=10&_page=1 | `GET` | Course Video  - Search | ✅ |
 | 35 | localhost:8080/course-video/1 | `GET` | Course Video - Get By ID | ✅ |
 | 36 | localhost:8080/course-video | `POST` | Course Video - Save | ✅ |

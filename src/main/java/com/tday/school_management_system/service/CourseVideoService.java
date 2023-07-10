@@ -13,6 +13,7 @@ public interface CourseVideoService {
 	CourseVideo getById(Long id);
 	Page<CourseVideo> getAll(Map<String, String> params);
     List<CourseVideoDisplayDTO> toCourseVideoDisplayDTOs(List<CourseVideo> courseVideo);
+    List<CourseVideoDisplayDTO> toPreviewCourseVideoDisplayDTOs(List<CourseVideo> courseVideo);
 	CourseVideo update(Long id, CourseVideo courseVideo);
 	void delete(Long id);
 }

@@ -1,26 +1,25 @@
 package com.tday.school_management_system.service.impl;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Map;
+import java.util.List;
+import java.util.ArrayList;
 import java.util.stream.Collectors;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+import org.springframework.data.domain.Pageable;
+import org.springframework.beans.factory.annotation.Autowired;
 
-import com.tday.school_management_system.dto.CourseVideoDTO;
-import com.tday.school_management_system.dto.CourseVideoDisplayDTO;
-import com.tday.school_management_system.exception.ResourceNotFoundException;
+import com.tday.school_management_system.model.Course;
+import com.tday.school_management_system.utils.PageUtil;
 import com.tday.school_management_system.model.CourseVideo;
+import com.tday.school_management_system.spec.CourseVideoSpec;
+import com.tday.school_management_system.spec.CourseVideoFilter;
+import com.tday.school_management_system.dto.CourseVideoDisplayDTO;
+import com.tday.school_management_system.service.CourseVideoService;
 import com.tday.school_management_system.repository.CourseRepository;
 import com.tday.school_management_system.repository.CourseVideoRepository;
-import com.tday.school_management_system.service.CourseVideoService;
-import com.tday.school_management_system.spec.CourseVideoFilter;
-import com.tday.school_management_system.spec.CourseVideoSpec;
-import com.tday.school_management_system.utils.PageUtil;
-import com.tday.school_management_system.model.Course;
+import com.tday.school_management_system.exception.ResourceNotFoundException;
 
 @Service
 public class CourseVideoServiceImpl implements CourseVideoService {
@@ -39,7 +38,6 @@ public class CourseVideoServiceImpl implements CourseVideoService {
 	public CourseVideo getById(Long id) {
 		return courseVideoRepository.findById(id).orElseThrow(()-> new ResourceNotFoundException("Video"));
 	}
-
 
 	@Override
 	public CourseVideo update(Long id, CourseVideo courseVideo) {
@@ -108,6 +106,29 @@ public class CourseVideoServiceImpl implements CourseVideoService {
 			dto.setCourseVideoLink(c.getCourseVideoLink());
 			dto.setCourseOrdering(c.getCourseOrdering());
 			displayDTOs.add(dto);
+		}
+		return displayDTOs;
+	}
+
+	@Override
+	public List<CourseVideoDisplayDTO> toPreviewCourseVideoDisplayDTOs(List<CourseVideo> courseVideo) {
+		List<CourseVideoDisplayDTO> displayDTOs = new ArrayList<>();
+		List<Long> courseIds = courseVideo.stream().map(c -> c.getCourse().getCourseId()).toList();
+		List<Course> courses = courseRepository.findAllById(courseIds);
+		Map<Long,String> courseMap = courses.stream().collect(Collectors.toMap(c -> c.getCourseId(), c -> c.getCourseName()));
+		int tmpCount = 1;
+		for(CourseVideo c: courseVideo){
+			CourseVideoDisplayDTO dto = new CourseVideoDisplayDTO();
+			dto.setCourseVideoId(c.getCourseVideoId());
+			dto.setCourseId(c.getCourse().getCourseId());
+			dto.setCourseName(courseMap.get(c.getCourse().getCourseId()));
+			dto.setCourseVideoTitle(c.getCourseVideoTitle());
+			dto.setCourseVideoDescription(c.getCourseVideoDescription());
+			dto.setCourseVideoThumbnail(c.getCourseVideoThumbnail());
+			if(tmpCount <= 3) dto.setCourseVideoLink(c.getCourseVideoLink());
+			dto.setCourseOrdering(c.getCourseOrdering());
+			displayDTOs.add(dto);
+			tmpCount++;
 		}
 		return displayDTOs;
 	}

@@ -1,9 +1,9 @@
 package com.tday.school_management_system.mapper;
 
-import com.tday.school_management_system.model.Role;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 
+import com.tday.school_management_system.model.Role;
 import com.tday.school_management_system.dto.RoleDTO;
 
 @Mapper
