@@ -88,6 +88,12 @@
 			<scope>runtime</scope>
 		</dependency>
 		<!-- *-* JWT Stop *-* -->
+		<!-- *-* SMTP(Simple Mail Transfer Protocol) Start *-* -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-mail</artifactId>
+		</dependency>
+		<!-- *-* SMTP(Simple Mail Transfer Protocol) Stop *-* -->
 	</dependencies>
 	<!-- *-* Dependencies Stop *-* -->
 

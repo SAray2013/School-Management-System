@@ -38,7 +38,7 @@ public class UserController {
         try{
             return ResponseHandler.generateResponseSuccessful(
                     "Your data has been saved.",
-                    UsersMapper.INSTANCE.toUsersDTO(userService.create(UsersMapper.INSTANCE.toUsers(userDTO)))
+                    UsersMapper.INSTANCE.toUsersDTO(userService.create(UsersMapper.INSTANCE.toUsers(userDTO),"ADMIN"))
             );
         }catch (Exception e){
             return ResponseHandler.generateResponseUnsuccessful(HttpStatus.BAD_REQUEST,e.getMessage());

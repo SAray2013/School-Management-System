@@ -15,7 +15,22 @@ Developer: **Ray**
 ---
 
 ## 🔬 Technologies:
-`Java 17`, `Spring Data`, `Spring Boot`, `Spring Security`, `JWT`, `PostgreSQL`, `Liquibase`, `Junit`, `Mapstruct`, `Swagger`, `Audit`, `Log` etc.
+
+| # | Technology | Active |
+| - | - | - |
+| 1 | `Java 17` | ✅ |
+| 2 | `Spring Data` | ✅ |
+| 3 | `Spring Boot` | ✅ |
+| 4 | `Spring Security` | ✅ |
+| 5 | `JWT` | ✅ |
+| 6 | `PostgreSQL` | ✅ |
+| 7 | `Mail Server` | ✅ |
+| 8 | `Liquibase` | 🔲 |
+| 9 | `Junit` | 🔲 |
+| 10 | `Mapstruct` | ✅ |
+| 11 | `Swagger` | 🔲 |
+| 12 | `Audit` | 🔲 |
+| 13 | `Log` | 🔲 |
 
 ---
 
@@ -61,9 +76,9 @@ Developer: **Ray**
 | 36 | localhost:8080/course-video | `POST` | Course Video - Save | ✅ |
 | 37 | localhost:8080/course-video/1 | `PUT` | Course Video - Update | ✅ |
 | 38 | localhost:8080/course-video/1 | `DELETE` | Course Video - Delete | ✅ |
-| 39 | localhost:8080/register-author | `POST` | Register author | ⛔ |
-| 40 | localhost:8080/register-subscriber | `POST` | Register Subscriber | ⛔ |
-| 41 | localhost:8080/verify-email | `POST` | Verify email | ⛔ |
+| 39 | localhost:8080/registration/author | `POST` | Register author | ✅ |
+| 40 | localhost:8080//registration/subscriber | `POST` | Register Subscriber | ✅ |
+| 41 | localhost:8080/registration/verify/1 | `GET` | Verify email | ✅ |
 
 ---
 

@@ -47,6 +47,8 @@ public class SecurityConfig {
 			.authorizeHttpRequests()
 			.antMatchers("/","/index","/home","css/**","js/**").permitAll()
 			.antMatchers(HttpMethod.GET,"/course/preview*").permitAll()
+			.antMatchers(HttpMethod.POST,"/registration/*").permitAll()
+			.antMatchers(HttpMethod.GET,"/registration/verify/*").permitAll()
 			.anyRequest()
 			.authenticated();
 		

@@ -35,19 +35,19 @@ public class UsersServiceImpl implements UsersService {
 	private PasswordEncoder passwordEncoder;
 
     @Override
-    public User create(User user) {
+    public User create(User user, String roleName) {
     	try{
-    		Role _tmp = roleService.getByName("ADMIN");
+    		Role _tmp = roleService.getByName(roleName);
     		Set<Role> roles = Stream.of(_tmp).collect(Collectors.toCollection(HashSet::new));
     		user.setPassword(passwordEncoder.encode(user.getPassword()));
-    		user.setIsCredentialsNonExpired(true);
-    		user.setIsAccountNonLocked(true);
-    		user.setIsAccountNonExpired(true);
-    		user.setIsEnabled(true);
+    		user.setIsCredentialsNonExpired(false);
+    		user.setIsAccountNonLocked(false);
+    		user.setIsAccountNonExpired(false);
+    		user.setIsEnabled(false);
     		user.setRoles(roles);
             return userRepository.save(user);
         }catch (Exception e){
-            throw new RuntimeException("User name already exists.");
+            throw new RuntimeException("Username already exists.");
         }
     }
 
@@ -107,5 +107,16 @@ public class UsersServiceImpl implements UsersService {
         getById(id);
         userRepository.deleteById(id);
     }
+
+	@Override
+	public void verifyEmail(Long id) {
+		User user = getById(id);
+		user.setIsCredentialsNonExpired(true);
+		user.setIsAccountNonLocked(true);
+		user.setIsAccountNonExpired(true);
+		user.setIsEnabled(true);
+		user.setRoles(user.getRoles());
+        userRepository.save(user);
+	}
     
 }
