@@ -42,6 +42,12 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<!-- *-* Validation Start *-* -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-validation</artifactId>
+		</dependency>
+		<!-- *-* Validation Stop *-* -->
 		<!-- *-* Mapstruct Start *-* -->
 		<dependency>
 			<groupId>org.mapstruct</groupId>
@@ -55,6 +61,10 @@
 		</dependency>
 		<!-- *-* Mapstruct Stop *-* -->
 		<!-- *-* JWT Start *-* -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-test</artifactId>
@@ -78,6 +88,12 @@
 			<scope>runtime</scope>
 		</dependency>
 		<!-- *-* JWT Stop *-* -->
+		<!-- *-* SMTP(Simple Mail Transfer Protocol) Start *-* -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-mail</artifactId>
+		</dependency>
+		<!-- *-* SMTP(Simple Mail Transfer Protocol) Stop *-* -->
 	</dependencies>
 	<!-- *-* Dependencies Stop *-* -->
 
