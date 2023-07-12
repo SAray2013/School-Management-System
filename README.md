@@ -28,7 +28,7 @@ Developer: **Ray**
 | 8 | `Liquibase` | 🔲 |
 | 9 | `Junit` | 🔲 |
 | 10 | `Mapstruct` | ✅ |
-| 11 | `Swagger` | 🔲 |
+| 11 | `Swagger` | ✅ |
 | 12 | `Audit` | 🔲 |
 | 13 | `Log` | 🔲 |
 

@@ -49,6 +49,11 @@ public class SecurityConfig {
 			.antMatchers(HttpMethod.GET,"/course/preview*").permitAll()
 			.antMatchers(HttpMethod.POST,"/registration/*").permitAll()
 			.antMatchers(HttpMethod.GET,"/registration/verify/*").permitAll()
+			.antMatchers(HttpMethod.GET,"/swagger-resources/**").permitAll()
+			.antMatchers(HttpMethod.GET,"/swagger-ui.html").permitAll()
+			.antMatchers(HttpMethod.GET,"/swagger-ui/**").permitAll()
+			.antMatchers(HttpMethod.GET,"/v2/api-docs").permitAll()
+			.antMatchers(HttpMethod.GET,"/webjars/**").permitAll()
 			.anyRequest()
 			.authenticated();
 		
