@@ -34,10 +34,11 @@ public class CategoryServiceImpl implements CategoryService {
 
     @Override
     public Category update(Long id, Category category) {
-        getById(id);
-        category.setCategoryId(id);
+        Category tmp = getById(id);
         try{
-            return categoryRepository.save(category);
+        	tmp.setCategoryName(category.getCategoryName());
+        	tmp.setCategoryOrdering(category.getCategoryOrdering());
+            return categoryRepository.save(tmp);
         }catch (Exception e){
             throw new RuntimeException("Category name already exists.");
         }

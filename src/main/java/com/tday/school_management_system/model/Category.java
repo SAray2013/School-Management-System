@@ -12,7 +12,7 @@ import org.hibernate.annotations.Comment;
 		}
 )
 @Data
-public class Category {
+public class Category extends AuditEntity {
 
 	@Id
 	@GeneratedValue(generator = "categories_generator")
@@ -29,4 +29,5 @@ public class Category {
 	@Column(name = "is_deleted" , columnDefinition = "integer default 0")
 	@Comment("0: Keep , 1: Remove")
 	private Short isDeleted;
+	
 }
