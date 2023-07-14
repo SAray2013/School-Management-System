@@ -13,3 +13,17 @@ spring:
   jackson:
     serialization:
       fail-on-empty-beans: false
+  mail:
+    host: smtp.gmail.com
+    username: mymotherhang@gmail.com
+    password: uybvnzvretrgwuyq
+    port: 587
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+              enable: true
+  mvc:
+      pathmatch:
+        matching-strategy: ant_path_matcher
