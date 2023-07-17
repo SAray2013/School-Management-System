@@ -1,0 +1,24 @@
+databaseChangeLog:
+  - changeSet:
+      id: 008_insert_tbl_courses
+      author: saraykim2013@gmail.com
+      changes:
+        - loadData:
+            file: db/data/008_insert_tbl_courses.csv
+            tableName: tbl_courses
+            columns:
+              - column:
+                  name: course_id
+                  type: NUMERIC
+              - column:
+                  name: category_id
+                  type: NUMERIC
+              - column:
+                  name: cour_name
+                  type: STRING
+              - column:
+                  name: cour_description
+                  type: STRING
+              - column:
+                  name: cour_price
+                  type: NUMERIC

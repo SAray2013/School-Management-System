@@ -1,0 +1,10 @@
+course_video_id ,course_id,cour_video_title,cour_video_description,cour_video_thumbnail,cour_video_link,cour_ordering
+1,1,Course 01 - Video tutorial 01,Video tutorial 01 - Something...,link-image.com,link-video.com,1
+2,1,Course 01 - Video tutorial 02,Video tutorial 02 - Something...,link-image.com,link-video.com,2
+3,1,Course 01 - Video tutorial 03,Video tutorial 03 - Something...,link-image.com,link-video.com,3
+4,2,Course 02 - Video tutorial 01,Video tutorial 01 - Something...,link-image.com,link-video.com,1
+5,2,Course 02 - Video tutorial 02,Video tutorial 02 - Something...,link-image.com,link-video.com,2
+6,2,Course 02 - Video tutorial 03,Video tutorial 03 - Something...,link-image.com,link-video.com,3
+7,3,Course 03 - Video tutorial 01,Video tutorial 01 - Something...,link-image.com,link-video.com,1
+8,3,Course 03 - Video tutorial 02,Video tutorial 02 - Something...,link-image.com,link-video.com,2
+9,3,Course 03 - Video tutorial 03,Video tutorial 03 - Something...,link-image.com,link-video.com,3
