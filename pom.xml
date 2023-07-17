@@ -112,6 +112,12 @@
 		  <artifactId>liquibase-core</artifactId>
 		</dependency>
 		<!-- *-* Liquibase Stop *-* -->
+		<!-- *-* Log4J Start *-* -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-log4j2</artifactId>
+		</dependency>
+		<!-- *-* Log4J Stop *-* -->
 	</dependencies>
 	<!-- *-* Dependencies Stop *-* -->
 

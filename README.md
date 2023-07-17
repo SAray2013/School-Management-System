@@ -30,7 +30,7 @@ Developer: **Ray**
 | 10 | `Mapstruct` | ✅ |
 | 11 | `Swagger` | ✅ |
 | 12 | `Audit` | ✅ |
-| 13 | `Log` | 🔲 |
+| 13 | `Log` | ✅ |
 
 ---
 

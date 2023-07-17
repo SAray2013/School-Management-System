@@ -1,0 +1,45 @@
+2023-07-18 06:27:02,490 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.5.Final
+2023-07-18 06:27:02,494 INFO org.springframework.boot.StartupInfoLogger [main] Starting SchoolManagementSystemApplication using Java 17.0.7 on Kims-MBP with PID 51165 (/Users/kimsaray/Documents/Developer/Java/Dev/School-Management-System/target/classes started by kimsaray in /Users/kimsaray/Documents/Developer/Java/Dev/School-Management-System)
+2023-07-18 06:27:02,496 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-07-18 06:27:03,287 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-18 06:27:03,378 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 84 ms. Found 10 JPA repository interfaces.
+2023-07-18 06:27:04,001 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-07-18 06:27:04,011 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-07-18 06:27:04,016 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2023-07-18 06:27:04,016 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.76]
+2023-07-18 06:27:04,130 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-07-18 06:27:04,130 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1564 ms
+2023-07-18 06:27:04,376 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2023-07-18 06:27:04,484 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-07-18 06:27:04,629 INFO liquibase.logging.core.JavaLogger [main] Set default schema name to public
+2023-07-18 06:27:04,708 INFO liquibase.logging.core.JavaLogger [main] Successfully acquired change log lock
+2023-07-18 06:27:04,957 INFO liquibase.logging.core.JavaLogger [main] Reading from public.databasechangelog
+2023-07-18 06:27:05,036 INFO liquibase.logging.core.JavaLogger [main] Successfully released change log lock
+2023-07-18 06:27:05,112 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-18 06:27:05,168 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-07-18 06:27:05,299 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-07-18 06:27:05,394 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-07-18 06:27:06,305 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-18 06:27:06,325 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-18 06:27:07,176 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-18 06:27:07,455 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2cb09f00, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5c14c284, org.springframework.security.web.context.SecurityContextPersistenceFilter@319c77de, org.springframework.security.web.header.HeaderWriterFilter@331b0bfd, org.springframework.security.web.authentication.logout.LogoutFilter@43b1fdb7, com.tday.school_management_system.config.security.jwt.JwtLoginFilter@1aae50f9, com.tday.school_management_system.config.security.jwt.TokenVerifyFilter@2b53d6fc, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1f9009d3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4c9ed40, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3b30409, org.springframework.security.web.session.SessionManagementFilter@27e0906f, org.springframework.security.web.access.ExceptionTranslationFilter@749054a3, org.springframework.security.web.access.intercept.AuthorizationFilter@57b4fc1e]
+2023-07-18 06:27:07,767 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-07-18 06:27:07,794 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-07-18 06:27:08,065 INFO org.springframework.boot.StartupInfoLogger [main] Started SchoolManagementSystemApplication in 6.046 seconds (JVM running for 6.625)
+2023-07-18 06:27:21,026 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-18 06:27:21,026 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-07-18 06:27:21,032 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 5 ms
+2023-07-18 06:27:21,400 INFO com.tday.school_management_system.service.impl.CategoryServiceImpl [http-nio-8080-exec-1] LOG-INFO: Your category has been created.
+2023-07-18 06:27:21,553 WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-1] SQL Error: 0, SQLState: 23505
+2023-07-18 06:27:21,554 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-1] ERROR: duplicate key value violates unique constraint "uk_nujudbwqrry7f4lh1x577mr3b"
+  Detail: Key (cate_name)=(Java34) already exists.
+2023-07-18 06:27:21,560 INFO org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl [http-nio-8080-exec-1] HHH000010: On release of batch it still contained JDBC statements
+2023-07-18 06:28:16,226 WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-5] SQL Error: 0, SQLState: 23505
+2023-07-18 06:28:16,228 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-5] ERROR: duplicate key value violates unique constraint "uk_nujudbwqrry7f4lh1x577mr3b"
+  Detail: Key (cate_name)=(Java) already exists.
+2023-07-18 06:28:16,229 INFO org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl [http-nio-8080-exec-5] HHH000010: On release of batch it still contained JDBC statements
+2023-07-18 06:28:16,230 ERROR com.tday.school_management_system.service.impl.CategoryServiceImpl [http-nio-8080-exec-5] LOG-ERROR: Category update error.
+2023-07-18 06:29:10,448 WARN com.tday.school_management_system.service.impl.CategoryServiceImpl [http-nio-8080-exec-9] LOG-WARN: Please consider again before deleted!
+2023-07-18 06:29:55,630 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-18 06:29:55,633 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-07-18 06:29:55,639 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.

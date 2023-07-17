@@ -2,6 +2,8 @@ package com.tday.school_management_system.service.impl;
 
 import java.util.Map;
 
+import lombok.extern.log4j.Log4j2;
+
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
 import org.springframework.data.domain.Pageable;
@@ -10,6 +12,7 @@ import com.tday.school_management_system.utils.PageUtil;
 import com.tday.school_management_system.model.Category;
 import com.tday.school_management_system.spec.CategorySpec;
 import com.tday.school_management_system.spec.CategoryFilter;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import com.tday.school_management_system.service.CategoryService;
 import com.tday.school_management_system.repository.CategoryRepository;
@@ -17,6 +20,7 @@ import com.tday.school_management_system.exception.ResourceNotFoundException;
 
 
 @Service
+@Log4j2
 public class CategoryServiceImpl implements CategoryService {
 
     @Autowired
@@ -24,6 +28,7 @@ public class CategoryServiceImpl implements CategoryService {
 
     @Override
     public Category create(Category category) {
+    	log.info("LOG-INFO: Your category has been created.");
         return categoryRepository.save(category);
     }
 
@@ -40,6 +45,7 @@ public class CategoryServiceImpl implements CategoryService {
         	tmp.setCategoryOrdering(category.getCategoryOrdering());
             return categoryRepository.save(tmp);
         }catch (Exception e){
+        	log.error("LOG-ERROR: Category update error.");
             throw new RuntimeException("Category name already exists.");
         }
     }
@@ -47,6 +53,7 @@ public class CategoryServiceImpl implements CategoryService {
     @Override
     public void delete(Long id) {
         getById(id);
+        log.warn("LOG-WARN: Please consider again before deleted!");
         categoryRepository.deleteById(id);
     }
 
