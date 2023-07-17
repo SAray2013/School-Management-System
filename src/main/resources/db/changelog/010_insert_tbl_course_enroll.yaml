@@ -1,0 +1,22 @@
+databaseChangeLog:
+  - changeSet:
+      id: 010_insert_tbl_course_enroll
+      author: saraykim2013@gmail.com
+      changes:
+        - loadData:
+            file: db/data/010_insert_tbl_course_enroll.csv
+            tableName: tbl_course_enroll
+            columns:
+              - column:
+                  name: course_enroll_id
+                  type: NUMERIC
+              - column:
+                  name: course_id
+                  type: NUMERIC
+              - column:
+                  name: user_id
+                  type: NUMERIC
+              - column:
+                  name: is_approved
+                  type: NUMERIC
+                  

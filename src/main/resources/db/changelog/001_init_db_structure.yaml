@@ -1,0 +1,583 @@
+databaseChangeLog:
+- changeSet:
+    id: 1689461281403-1
+    author: saraykim2013@gmail.com
+    changes:
+    - createSequence:
+        cacheSize: 1
+        cycle: false
+        dataType: bigint
+        incrementBy: 50
+        maxValue: 9223372036854775807
+        minValue: 1
+        sequenceName: categories
+        startValue: 1
+- changeSet:
+    id: 1689461281403-2
+    author: saraykim2013@gmail.com
+    changes:
+    - createSequence:
+        cacheSize: 1
+        cycle: false
+        dataType: bigint
+        incrementBy: 1
+        maxValue: 9223372036854775807
+        minValue: 1
+        sequenceName: course_enroll_generator
+        startValue: 1
+- changeSet:
+    id: 1689461281403-3
+    author: saraykim2013@gmail.com
+    changes:
+    - createSequence:
+        cacheSize: 1
+        cycle: false
+        dataType: bigint
+        incrementBy: 1
+        maxValue: 9223372036854775807
+        minValue: 1
+        sequenceName: course_like_generator
+        startValue: 1
+- changeSet:
+    id: 1689461281403-4
+    author: saraykim2013@gmail.com
+    changes:
+    - createSequence:
+        cacheSize: 1
+        cycle: false
+        dataType: bigint
+        incrementBy: 50
+        maxValue: 9223372036854775807
+        minValue: 1
+        sequenceName: course_videos
+        startValue: 1
+- changeSet:
+    id: 1689461281403-5
+    author: saraykim2013@gmail.com
+    changes:
+    - createSequence:
+        cacheSize: 1
+        cycle: false
+        dataType: bigint
+        incrementBy: 1
+        maxValue: 9223372036854775807
+        minValue: 1
+        sequenceName: course_visit_generator
+        startValue: 1
+- changeSet:
+    id: 1689461281403-6
+    author: saraykim2013@gmail.com
+    changes:
+    - createSequence:
+        cacheSize: 1
+        cycle: false
+        dataType: bigint
+        incrementBy: 50
+        maxValue: 9223372036854775807
+        minValue: 1
+        sequenceName: courses
+        startValue: 1
+- changeSet:
+    id: 1689461281403-7
+    author: saraykim2013@gmail.com
+    changes:
+    - createTable:
+        columns:
+        - column:
+            autoIncrement: true
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: permissions_pkey
+            name: id
+            type: BIGINT
+        - column:
+            constraints:
+              nullable: false
+            name: name
+            type: VARCHAR(255)
+        tableName: permissions
+- changeSet:
+    id: 1689461281403-8
+    author: saraykim2013@gmail.com
+    changes:
+    - createTable:
+        columns:
+        - column:
+            autoIncrement: true
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: roles_pkey
+            name: id
+            type: BIGINT
+        - column:
+            constraints:
+              nullable: false
+            name: name
+            type: VARCHAR(255)
+        tableName: roles
+- changeSet:
+    id: 1689461281403-9
+    author: saraykim2013@gmail.com
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: roles_permissions_pkey
+            name: role_id
+            type: BIGINT
+        - column:
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: roles_permissions_pkey
+            name: permissions_id
+            type: BIGINT
+        tableName: roles_permissions
+- changeSet:
+    id: 1689461281403-10
+    author: saraykim2013@gmail.com
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: tbl_categories_pkey
+            name: category_id
+            type: BIGINT
+        - column:
+            constraints:
+              nullable: false
+            name: cate_name
+            type: VARCHAR(255)
+        - column:
+            name: cate_ordering
+            type: SMALLINT
+        - column:
+            defaultValueNumeric: 0
+            name: is_deleted
+            remarks: '0: Keep , 1: Remove'
+            type: INTEGER
+        - column:
+            name: created_at
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: created_by
+            type: VARCHAR(255)
+        - column:
+            name: modified_at
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: modified_by
+            type: VARCHAR(255)
+        tableName: tbl_categories
+- changeSet:
+    id: 1689461281403-11
+    author: saraykim2013@gmail.com
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: tbl_course_enroll_pkey
+            name: course_enroll_id
+            type: BIGINT
+        - column:
+            name: course_id
+            type: BIGINT
+        - column:
+            name: is_approved
+            remarks: '0: Pending , 1: Approved , 2: Reject'
+            type: SMALLINT
+        - column:
+            name: user_id
+            type: BIGINT
+        tableName: tbl_course_enroll
+- changeSet:
+    id: 1689461281403-12
+    author: saraykim2013@gmail.com
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: tbl_course_like_pkey
+            name: course_like_id
+            type: BIGINT
+        - column:
+            name: course_id
+            type: BIGINT
+        - column:
+            name: user_id
+            type: BIGINT
+        tableName: tbl_course_like
+- changeSet:
+    id: 1689461281403-13
+    author: saraykim2013@gmail.com
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: tbl_course_videos_pkey
+            name: course_video_id
+            type: BIGINT
+        - column:
+            name: cour_ordering
+            type: SMALLINT
+        - column:
+            name: cour_video_description
+            type: VARCHAR(255)
+        - column:
+            name: cour_video_link
+            type: VARCHAR(255)
+        - column:
+            name: cour_video_thumbnail
+            type: VARCHAR(255)
+        - column:
+            name: cour_video_title
+            type: VARCHAR(255)
+        - column:
+            constraints:
+              nullable: false
+            name: course_id
+            type: BIGINT
+        tableName: tbl_course_videos
+- changeSet:
+    id: 1689461281403-14
+    author: saraykim2013@gmail.com
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: tbl_course_visit_pkey
+            name: course_visit_id
+            type: BIGINT
+        - column:
+            name: course_id
+            type: BIGINT
+        - column:
+            name: user_id
+            type: BIGINT
+        tableName: tbl_course_visit
+- changeSet:
+    id: 1689461281403-15
+    author: saraykim2013@gmail.com
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: tbl_courses_pkey
+            name: course_id
+            type: BIGINT
+        - column:
+            name: cour_description
+            type: VARCHAR(255)
+        - column:
+            name: cour_name
+            type: VARCHAR(255)
+        - column:
+            name: cour_price
+            type: numeric(19, 2)
+        - column:
+            constraints:
+              nullable: false
+            name: category_id
+            type: BIGINT
+        tableName: tbl_courses
+- changeSet:
+    id: 1689461281403-16
+    author: saraykim2013@gmail.com
+    changes:
+    - createTable:
+        columns:
+        - column:
+            autoIncrement: true
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: users_pkey
+            name: id
+            type: BIGINT
+        - column:
+            name: first_name
+            type: VARCHAR(255)
+        - column:
+            name: is_account_non_expired
+            type: BOOLEAN
+        - column:
+            name: is_account_non_locked
+            type: BOOLEAN
+        - column:
+            name: is_credentials_non_expired
+            type: BOOLEAN
+        - column:
+            name: is_enabled
+            type: BOOLEAN
+        - column:
+            name: last_name
+            type: VARCHAR(255)
+        - column:
+            name: password
+            type: VARCHAR(255)
+        - column:
+            constraints:
+              nullable: false
+            name: username
+            type: VARCHAR(255)
+        - column:
+            name: email
+            type: VARCHAR(255)
+        tableName: users
+- changeSet:
+    id: 1689461281403-17
+    author: saraykim2013@gmail.com
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: users_roles_pkey
+            name: user_id
+            type: BIGINT
+        - column:
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: users_roles_pkey
+            name: roles_id
+            type: BIGINT
+        tableName: users_roles
+- changeSet:
+    id: 1689461281403-18
+    author: saraykim2013@gmail.com
+    changes:
+    - addUniqueConstraint:
+        columnNames: cate_name
+        constraintName: uk_nujudbwqrry7f4lh1x577mr3b
+        tableName: tbl_categories
+- changeSet:
+    id: 1689461281403-19
+    author: saraykim2013@gmail.com
+    changes:
+    - addUniqueConstraint:
+        columnNames: name
+        constraintName: uk_ofx66keruapi6vyqpv6f2or37
+        tableName: roles
+- changeSet:
+    id: 1689461281403-20
+    author: saraykim2013@gmail.com
+    changes:
+    - addUniqueConstraint:
+        columnNames: name
+        constraintName: uk_pnvtwliis6p05pn6i3ndjrqt2
+        tableName: permissions
+- changeSet:
+    id: 1689461281403-21
+    author: saraykim2013@gmail.com
+    changes:
+    - addUniqueConstraint:
+        columnNames: username
+        constraintName: uk_r43af9ap4edm43mmtq01oddj6
+        tableName: users
+- changeSet:
+    id: 1689461281403-22
+    author: saraykim2013@gmail.com
+    changes:
+    - addForeignKeyConstraint:
+        baseColumnNames: user_id
+        baseTableName: users_roles
+        constraintName: fk2o0jvgh89lemvvo17cbqvdxaa
+        deferrable: false
+        initiallyDeferred: false
+        onDelete: NO ACTION
+        onUpdate: NO ACTION
+        referencedColumnNames: id
+        referencedTableName: users
+        validate: true
+- changeSet:
+    id: 1689461281403-23
+    author: saraykim2013@gmail.com
+    changes:
+    - addForeignKeyConstraint:
+        baseColumnNames: course_id
+        baseTableName: tbl_course_enroll
+        constraintName: fk2qjuxmyouh0hs496fll9jmywh
+        deferrable: false
+        initiallyDeferred: false
+        onDelete: NO ACTION
+        onUpdate: NO ACTION
+        referencedColumnNames: course_id
+        referencedTableName: tbl_courses
+        validate: true
+- changeSet:
+    id: 1689461281403-24
+    author: saraykim2013@gmail.com
+    changes:
+    - addForeignKeyConstraint:
+        baseColumnNames: course_id
+        baseTableName: tbl_course_visit
+        constraintName: fk3s63b2pq4cpm90rglndu69qgp
+        deferrable: false
+        initiallyDeferred: false
+        onDelete: NO ACTION
+        onUpdate: NO ACTION
+        referencedColumnNames: course_id
+        referencedTableName: tbl_courses
+        validate: true
+- changeSet:
+    id: 1689461281403-25
+    author: saraykim2013@gmail.com
+    changes:
+    - addForeignKeyConstraint:
+        baseColumnNames: user_id
+        baseTableName: tbl_course_like
+        constraintName: fk4k8u9klj8jg676eldhxhngtav
+        deferrable: false
+        initiallyDeferred: false
+        onDelete: NO ACTION
+        onUpdate: NO ACTION
+        referencedColumnNames: id
+        referencedTableName: users
+        validate: true
+- changeSet:
+    id: 1689461281403-26
+    author: saraykim2013@gmail.com
+    changes:
+    - addForeignKeyConstraint:
+        baseColumnNames: permissions_id
+        baseTableName: roles_permissions
+        constraintName: fk570wuy6sacdnrw8wdqjfh7j0q
+        deferrable: false
+        initiallyDeferred: false
+        onDelete: NO ACTION
+        onUpdate: NO ACTION
+        referencedColumnNames: id
+        referencedTableName: permissions
+        validate: true
+- changeSet:
+    id: 1689461281403-27
+    author: saraykim2013@gmail.com
+    changes:
+    - addForeignKeyConstraint:
+        baseColumnNames: roles_id
+        baseTableName: users_roles
+        constraintName: fka62j07k5mhgifpp955h37ponj
+        deferrable: false
+        initiallyDeferred: false
+        onDelete: NO ACTION
+        onUpdate: NO ACTION
+        referencedColumnNames: id
+        referencedTableName: roles
+        validate: true
+- changeSet:
+    id: 1689461281403-28
+    author: saraykim2013@gmail.com
+    changes:
+    - addForeignKeyConstraint:
+        baseColumnNames: category_id
+        baseTableName: tbl_courses
+        constraintName: fkbbw7q8weuhdy9w3cpv4osi23h
+        deferrable: false
+        initiallyDeferred: false
+        onDelete: NO ACTION
+        onUpdate: NO ACTION
+        referencedColumnNames: category_id
+        referencedTableName: tbl_categories
+        validate: true
+- changeSet:
+    id: 1689461281403-29
+    author: saraykim2013@gmail.com
+    changes:
+    - addForeignKeyConstraint:
+        baseColumnNames: course_id
+        baseTableName: tbl_course_videos
+        constraintName: fki7kkl850thm0lde6bvmemy1r9
+        deferrable: false
+        initiallyDeferred: false
+        onDelete: NO ACTION
+        onUpdate: NO ACTION
+        referencedColumnNames: course_id
+        referencedTableName: tbl_courses
+        validate: true
+- changeSet:
+    id: 1689461281403-30
+    author: saraykim2013@gmail.com
+    changes:
+    - addForeignKeyConstraint:
+        baseColumnNames: user_id
+        baseTableName: tbl_course_enroll
+        constraintName: fkl1fo2gc5rxtyuvgmnjddwr3gv
+        deferrable: false
+        initiallyDeferred: false
+        onDelete: NO ACTION
+        onUpdate: NO ACTION
+        referencedColumnNames: id
+        referencedTableName: users
+        validate: true
+- changeSet:
+    id: 1689461281403-31
+    author: saraykim2013@gmail.com
+    changes:
+    - addForeignKeyConstraint:
+        baseColumnNames: course_id
+        baseTableName: tbl_course_like
+        constraintName: fkoyc828wrc3prx701udgfxbbus
+        deferrable: false
+        initiallyDeferred: false
+        onDelete: NO ACTION
+        onUpdate: NO ACTION
+        referencedColumnNames: course_id
+        referencedTableName: tbl_courses
+        validate: true
+- changeSet:
+    id: 1689461281403-32
+    author: saraykim2013@gmail.com
+    changes:
+    - addForeignKeyConstraint:
+        baseColumnNames: user_id
+        baseTableName: tbl_course_visit
+        constraintName: fkpisbuo119ieghcaximhgy47od
+        deferrable: false
+        initiallyDeferred: false
+        onDelete: NO ACTION
+        onUpdate: NO ACTION
+        referencedColumnNames: id
+        referencedTableName: users
+        validate: true
+- changeSet:
+    id: 1689461281403-33
+    author: saraykim2013@gmail.com
+    changes:
+    - addForeignKeyConstraint:
+        baseColumnNames: role_id
+        baseTableName: roles_permissions
+        constraintName: fkqi9odri6c1o81vjox54eedwyh
+        deferrable: false
+        initiallyDeferred: false
+        onDelete: NO ACTION
+        onUpdate: NO ACTION
+        referencedColumnNames: id
+        referencedTableName: roles
+        validate: true
+

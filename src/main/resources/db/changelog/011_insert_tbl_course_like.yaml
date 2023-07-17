@@ -1,0 +1,18 @@
+databaseChangeLog:
+  - changeSet:
+      id: 011_insert_tbl_course_like
+      author: saraykim2013@gmail.com
+      changes:
+        - loadData:
+            file: db/data/011_insert_tbl_course_like.csv
+            tableName: tbl_course_like
+            columns:
+              - column:
+                  name: course_like_id
+                  type: NUMERIC
+              - column:
+                  name: course_id
+                  type: NUMERIC
+              - column:
+                  name: user_id
+                  type: NUMERIC

@@ -1,0 +1,18 @@
+databaseChangeLog:
+  - changeSet:
+      id: 012_insert_tbl_course_visit
+      author: saraykim2013@gmail.com
+      changes:
+        - loadData:
+            file: db/data/012_insert_tbl_course_visit.csv
+            tableName: tbl_course_visit
+            columns:
+              - column:
+                  name: course_visit_id
+                  type: NUMERIC
+              - column:
+                  name: course_id
+                  type: NUMERIC
+              - column:
+                  name: user_id
+                  type: NUMERIC

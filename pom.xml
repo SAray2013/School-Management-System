@@ -106,6 +106,12 @@
 		  <version>3.0.0</version>
 		</dependency>
 		<!-- *-* Swagger Stop *-* -->
+		<!-- *-* Liquibase Start *-* -->
+		<dependency>
+		  <groupId>org.liquibase</groupId>
+		  <artifactId>liquibase-core</artifactId>
+		</dependency>
+		<!-- *-* Liquibase Stop *-* -->
 	</dependencies>
 	<!-- *-* Dependencies Stop *-* -->
 
@@ -124,6 +130,15 @@
 					</excludes>
 				</configuration>
 			</plugin>
+			<!-- *-* Liquibase Start *-* -->
+			<plugin>
+			  <groupId>org.liquibase</groupId>
+			  <artifactId>liquibase-maven-plugin</artifactId>
+			  <configuration>
+			    <propertyFile>src/main/resources/liquibase.properties</propertyFile>
+			  </configuration>
+			</plugin>
+			<!-- *-* Liquibase Stop *-* -->
 		</plugins>
 		<!-- *-* Plugins Stop *-* -->
 	</build>

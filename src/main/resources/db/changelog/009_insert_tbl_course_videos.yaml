@@ -1,0 +1,30 @@
+databaseChangeLog:
+  - changeSet:
+      id: 009_insert_tbl_course_videos
+      author: saraykim2013@gmail.com
+      changes:
+        - loadData:
+            file: db/data/009_insert_tbl_course_videos.csv
+            tableName: tbl_course_videos
+            columns:
+              - column:
+                  name: course_video_id
+                  type: NUMERIC
+              - column:
+                  name: course_id
+                  type: NUMERIC
+              - column:
+                  name: cour_video_title
+                  type: STRING
+              - column:
+                  name: cour_video_description
+                  type: STRING
+              - column:
+                  name: cour_video_thumbnail
+                  type: STRING
+              - column:
+                  name: cour_video_link
+                  type: STRING
+              - column:
+                  name: cour_ordering
+                  type: NUMERIC

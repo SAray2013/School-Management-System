@@ -25,11 +25,11 @@ Developer: **Ray**
 | 5 | `JWT` | ✅ |
 | 6 | `PostgreSQL` | ✅ |
 | 7 | `Mail Server` | ✅ |
-| 8 | `Liquibase` | 🔲 |
+| 8 | `Liquibase` | ✅ |
 | 9 | `Junit` | 🔲 |
 | 10 | `Mapstruct` | ✅ |
 | 11 | `Swagger` | ✅ |
-| 12 | `Audit` | 🔲 |
+| 12 | `Audit` | ✅ |
 | 13 | `Log` | 🔲 |
 
 ---
