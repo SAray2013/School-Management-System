@@ -1,0 +1,4 @@
+id,first_name,last_name,username,password,email,is_account_non_expired,is_account_non_locked,is_credentials_non_expired,is_enabled
+1,Kim,Saray,admin,$2a$10$6OUYj1Q5bkHm45LCR47FEuSwSs//E9.ROttZoiCiLI/KjIuWwO8ve,saraykim2013@gmail.com,TRUE,TRUE,TRUE,TRUE
+2,Sok,Tha,author,$2a$10$Hn4CIFSzSy/KfLeeKM7zG.DOOcDVlCmPKpKvE1OfOVHUCeSJbH74e,author@gmail.com,TRUE,TRUE,TRUE,TRUE
+3,Tan,Monivan,subscriber,$2a$10$QtgR0NZ/fy85Od2RvE572ut1Wp2XP94A2fHF0oPW/WjGV8oc.fNlG,subscriber@gmail.com,TRUE,TRUE,TRUE,TRUE
