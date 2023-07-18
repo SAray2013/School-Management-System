@@ -3,6 +3,7 @@ package com.tday.school_management_system.service.impl;
 import java.util.Map;
 
 import lombok.extern.log4j.Log4j2;
+import lombok.RequiredArgsConstructor;
 
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
@@ -21,10 +22,11 @@ import com.tday.school_management_system.exception.ResourceNotFoundException;
 
 @Service
 @Log4j2
+@RequiredArgsConstructor
 public class CategoryServiceImpl implements CategoryService {
 
     @Autowired
-    CategoryRepository categoryRepository;
+    private final CategoryRepository categoryRepository;
 
     @Override
     public Category create(Category category) {
