@@ -1,0 +1,4 @@
+category_id,cate_name,cate_ordering,created_at,created_by,modified_at,modified_by,is_deleted
+1,Spring Framework,1,'2023-07-15',admin,'2023-07-15',admin,0
+2,Spring Boot,3,'2023-07-15',admin,'2023-07-15',admin,0
+3,Spring Core,2,'2023-07-15',admin,'2023-07-15',admin,0

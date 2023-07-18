@@ -1,0 +1,33 @@
+databaseChangeLog:
+  - changeSet:
+      id: 007_insert_tbl_categories
+      author: saraykim2013@gmail.com
+      changes:
+        - loadData:
+            file: db/data/007_insert_tbl_categories.csv
+            tableName: tbl_categories
+            columns:
+              - column:
+                  name: category_id
+                  type: NUMERIC
+              - column:
+                  name: cate_name
+                  type: STRING
+              - column:
+                  name: cate_ordering
+                  type: NUMERIC
+              - column:
+                  name: created_at
+                  type: DATETIME
+              - column:
+                  name: created_by
+                  type: STRING
+              - column:
+                  name: modified_at
+                  type: DATETIME
+              - column:
+                  name: modified_by
+                  type: STRING
+              - column:
+                  name: is_deleted
+                  type: NUMERIC

@@ -1,0 +1,25 @@
+databaseChangeLog:
+ - include:
+   - file: db/changelog/001_init_db_structure.yaml
+ - include:
+   - file: db/changelog/002_insert_roles.yaml
+ - include:
+   - file: db/changelog/003_insert_permissions.yaml
+ - include:
+   - file: db/changelog/004_insert_roles_permissions.yaml
+ - include:
+   - file: db/changelog/005_insert_users.yaml
+ - include:
+   - file: db/changelog/006_insert_users_roles.yaml
+ - include:
+   - file: db/changelog/007_insert_tbl_categories.yaml
+ - include:
+   - file: db/changelog/008_insert_tbl_courses.yaml
+ - include:
+   - file: db/changelog/009_insert_tbl_course_videos.yaml
+ - include:
+   - file: db/changelog/010_insert_tbl_course_enroll.yaml
+ - include:
+   - file: db/changelog/011_insert_tbl_course_like.yaml
+ - include:
+   - file: db/changelog/012_insert_tbl_course_visit.yaml
